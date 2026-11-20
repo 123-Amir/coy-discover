@@ -1,0 +1,23 @@
+{
+  "name": "coy-discover-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "db:init": "node src/db/init.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed": "node src/db/runSeed.js",
+    "avatars": "node scripts/generate-avatars.js",
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.0"
+  }
+}

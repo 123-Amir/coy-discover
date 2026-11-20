@@ -1,0 +1,30 @@
+{
+  "name": "coy-discover",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Privacy-first swipe discovery for Coy (SDE intern assignment)",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "db:init": "npm run db:init -w server",
+    "test": "npm test --workspaces --if-present",
+    "dev:client": "npm run dev -w client",
+    "build:client": "npm run build -w client",
+    "seed": "npm run seed -w server",
+    "avatars": "npm run avatars -w server",
+    "start": "npm start -w server",
+    "dev:server": "npm run dev -w server",
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"npm:dev:server\" \"npm:dev:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}
