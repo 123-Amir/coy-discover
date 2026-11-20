@@ -28,25 +28,40 @@ client/   React frontend and bundled profile avatars
 server/   Express API, SQLite database, services, and seed data
 ```
 
-## Requirements
+## Getting Started
+
+Prerequisites:
 
 - Node.js 20 or newer
 - npm
 
-## How to Run
+The app uses mock data and does not require external authentication.
 
-From the project root:
-
-```bash
-npm install
-npm run db:init
-npm run seed
-npm run dev
-```
-
-The app runs at `http://localhost:5173`.
-The API runs at `http://localhost:3001`.
-The server also seeds the database automatically when it starts.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/123-Amir/coy-discover.git
+   ```
+2. Open the project folder:
+   ```bash
+   cd coy-discover
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Initialize the database:
+   ```bash
+   npm run db:init
+   ```
+5. Seed mock profiles:
+   ```bash
+   npm run seed
+   ```
+6. Start the application:
+   ```bash
+   npm run dev
+   ```
+7. Open `http://localhost:5173` in your browser.
 
 ## Testing
 
